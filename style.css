@@ -84,7 +84,7 @@ h1 {
   min-height: 150px;
   max-height: 500px;
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 1.6rem;
   border: none;
   border-radius: 0.5rem;
@@ -94,32 +94,13 @@ h1 {
   resize: none;
 }
 
-button {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.6rem;
-  border: none;
-  border-radius: 0.5rem;
-  outline: none;
-  background: black;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background: #333;
-}
-
-button:active {
-  background: #222;
-  transform: scale(0.98);
-}
-
 .result {
-  margin-top: 1rem;
+  width: 100%;
   font-size: 1.8rem;
   font-weight: 700;
+  font-style: italic;
+  text-align: right;
+  margin-right: 1rem;
 }
 
 footer {
