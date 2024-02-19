@@ -80,6 +80,7 @@ h1 {
 
 .container_input {
   width: 100%;
+  height: 50vh;
   min-height: 150px;
   max-height: 500px;
   padding: 1rem;
@@ -90,6 +91,7 @@ h1 {
   outline: none;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  resize: none;
 }
 
 button {
@@ -144,6 +146,10 @@ footer a:active {
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -152,6 +158,7 @@ footer a:active {
   }
 
   .container_input {
+    height: auto;
     min-height: 120px;
   }
 }
