@@ -7,6 +7,13 @@
     <title>Text Tools</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -16,33 +23,50 @@
     <div class="container">
       <div class="vowel container_styled">
         <h2>Count Vowels</h2>
-        <textarea
-          id="vowelInput"
-          class="container_input"
-          placeholder="Enter your text here"
-        ></textarea>
+        <div class="container_textarea">
+          <textarea
+            id="vowelInput"
+            class="container_input"
+            placeholder="Enter your text here"
+          ></textarea>
+          <button type="button" id="copyVowelText" class="clipboardBtn">
+            <i class="bi bi-copy"></i>
+          </button>
+        </div>
         <p id="vowelResult" class="result hidden">Result</p>
       </div>
 
       <div class="word container_styled">
         <h2>Count Words</h2>
-        <textarea
-          id="wordInput"
-          class="container_input"
-          placeholder="Enter your text here"
-        ></textarea>
+        <div class="container_textarea">
+          <textarea
+            id="wordInput"
+            class="container_input"
+            placeholder="Enter your text here"
+          ></textarea>
+          <button type="button" id="copyWordText" class="clipboardBtn">
+            <i class="bi bi-copy"></i>
+          </button>
+        </div>
         <p id="wordResult" class="result hidden">Result</p>
       </div>
 
       <div class="character container_styled">
         <h2>Count Characters</h2>
-        <textarea
-          id="characterInput"
-          class="container_input"
-          placeholder="Enter your text here"
-        ></textarea>
+        <div class="container_textarea">
+          <textarea
+            id="characterInput"
+            class="container_input"
+            placeholder="Enter your text here"
+          ></textarea>
+          <button type="button" id="copyCharText" class="clipboardBtn">
+            <i class="bi bi-copy"></i>
+          </button>
+        </div>
         <p id="characterResult" class="result hidden">Result</p>
       </div>
+
+      <p id="alertCopy" class="hidden">Copied!</p>
     </div>
     <footer>
       <p>
