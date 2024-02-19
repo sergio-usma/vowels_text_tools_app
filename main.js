@@ -38,24 +38,26 @@ function countCharacters() {
 }
 
 function toClipboard(element) {
-  navigator.clipboard
-    .writeText(element)
-    .then(() => {
-      copyAlert.textContent = 'Copied!';
-      copyAlert.classList.remove('hidden');
-      copyAlert.classList.add('show-alert');
-    })
-    .catch(() => {
-      copyAlert.textContent = 'Bad request!';
-      copyAlert.classList.remove('hidden');
-      copyAlert.classList.add('error-alert');
-    })
-    .finally(() => {
-      setTimeout(() => {
-        copyAlert.classList.remove('show-alert');
-        copyAlert.classList.add('hidden');
-      }, 2000);
-    });
+  if (element) {
+    navigator.clipboard
+      .writeText(element)
+      .then(() => {
+        copyAlert.textContent = 'Copied!';
+        copyAlert.classList.remove('hidden');
+        copyAlert.classList.add('show-alert');
+      })
+      .catch(() => {
+        copyAlert.textContent = 'Bad request!';
+        copyAlert.classList.remove('hidden');
+        copyAlert.classList.add('error-alert');
+      })
+      .finally(() => {
+        setTimeout(() => {
+          copyAlert.classList.remove('show-alert');
+          copyAlert.classList.add('hidden');
+        }, 2000);
+      });
+  }
 }
 
 copyVowelText.addEventListener('click', () => {
